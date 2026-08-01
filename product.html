@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product | Hyde Enterprise Specialist AI Platform</title>
+    <meta name="description" content="Hyde is the training and inference platform that allows enterprises to build custom specialist models that outperform the frontier.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+    <link rel="apple-touch-icon" href="logo.png">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="logo.png" alt="Hyde Logo" class="logo-img">
+                <span>Hyde</span>
+            </a>
+            <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active btn-scramble" href="product.html">Product</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn-scramble" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn-scramble" href="careers.html">Careers</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center gap-3">
+                    <button class="btn-hyde-dark btn-scramble" data-bs-toggle="modal" data-bs-target="#touchModal">
+                        Get in touch
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <section class="hero-section text-center">
+        <div class="container">
+            <span class="text-teal font-monospace fs-6 uppercase mb-2 d-block" style="color: #43cab8;">// PRODUCT OVERVIEW</span>
+            <h1 class="hero-title mb-4">Specialist AI Stack</h1>
+            <p class="hero-lead mb-5">
+                The training and post-training infrastructure designed from the ground up for domain-specific enterprise models.
+            </p>
+        </div>
+    </section>
+
+    <!-- Product Features -->
+    <section class="section-padding border-top border-bottom border-secondary bg-dark">
+        <div class="container">
+            <div class="row g-4 mb-5">
+                <div class="col-lg-4 col-md-6">
+                    <div class="hyde-card">
+                        <div class="text-teal font-monospace fs-6 mb-2" style="color: #43cab8;">// 01. POST-TRAINING</div>
+                        <h3>Domain Alignment &amp; DPO</h3>
+                        <p>Incorporate enterprise feedback loops, direct preference optimization (DPO), and custom RLHF directly into model checkpoints.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="hyde-card">
+                        <div class="text-teal font-monospace fs-6 mb-2" style="color: #43cab8;">// 02. INFERENCE ENGINE</div>
+                        <h3>High-Throughput Serving</h3>
+                        <p>Sub-millisecond inference speeds powered by vLLM, custom CUDA kernels, and hardware-accelerated quantization.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="hyde-card">
+                        <div class="text-teal font-monospace fs-6 mb-2" style="color: #43cab8;">// 03. PRIVACY &amp; SECURITY</div>
+                        <h3>Zero-Trust Isolation</h3>
+                        <p>Train and serve models inside air-gapped enclaves with guaranteed zero data leakage to public frontiers.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center pt-4">
+                <button class="btn-hyde-primary btn-scramble" data-bs-toggle="modal" data-bs-target="#touchModal">
+                    Request Architecture Demo <i class="bi bi-arrow-right ms-1"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row g-4 mb-4">
+                <div class="col-lg-4">
+                    <a class="navbar-brand text-white mb-3" href="index.html">
+                        <img src="logo.png" alt="Hyde Logo" class="logo-img">
+                        <span>Hyde</span>
+                    </a>
+                    <p class="text-muted pe-lg-4">
+                        The training and inference stack that allows enterprises to build their own specialist models.
+                    </p>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h5>Navigation</h5>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="product.html">Product</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h5>Company</h5>
+                    <ul>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="#" data-bs-toggle="modal" data-bs-target="#touchModal">Get in touch</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5>Connect</h5>
+                    <p class="text-muted">Stay updated on enterprise AI infrastructure.</p>
+                    <div class="d-flex gap-3 fs-5">
+                        <a href="https://x.com/Buildwith_Hyde" target="_blank" title="Twitter/X @Buildwith_Hyde"><i class="bi bi-twitter-x"></i></a>
+                        <a href="https://linkedin.com" target="_blank" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-top border-secondary pt-4 d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+                <p class="mb-0 text-muted">&copy; 2026 Hyde Inc. All rights reserved.</p>
+                <div class="d-flex gap-3">
+                    <a href="#" class="text-muted">Privacy Policy</a>
+                    <a href="#" class="text-muted">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Get in Touch Modal Drawer -->
+    <div class="modal fade" id="touchModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content p-2">
+                <div class="modal-header border-bottom border-secondary">
+                    <h5 class="modal-title fw-bold text-white"><i class="bi bi-terminal text-teal me-2" style="color: #43cab8;"></i> Get in Touch with Hyde</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <form onsubmit="event.preventDefault(); alert('Inquiry received! The Hyde enterprise team will contact you shortly.'); bootstrap.Modal.getInstance(document.getElementById('touchModal')).hide();">
+                        <div class="mb-3">
+                            <label class="form-label text-muted fs-6">Full Name</label>
+                            <input type="text" class="form-control" placeholder="Jane Doe" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label text-muted fs-6">Work Email</label>
+                            <input type="email" class="form-control" placeholder="jane@enterprise.com" required>
+                        </div>
+                        <button type="submit" class="btn-hyde-primary w-100 py-3 mt-2 justify-content-center">
+                            Submit Enterprise Request <i class="bi bi-send ms-1"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
