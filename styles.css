@@ -1,0 +1,328 @@
+/*
+ * Hyde (hyde.ai) — Enterprise AI Training & Inference Stack Design System
+ */
+
+:root {
+    --bg-black: #000000;
+    --bg-dark: #050608;
+    --bg-surface: #0a0c10;
+    --bg-card: rgba(15, 18, 24, 0.7);
+    
+    --accent-teal: #43cab8;
+    --accent-teal-glow: rgba(67, 202, 184, 0.25);
+    --accent-blue: #3b82f6;
+    
+    --text-white: #ffffff;
+    --text-muted: #94a3b8;
+    --text-sub: #64748b;
+
+    --border-color: rgba(255, 255, 255, 0.08);
+    --border-glow: rgba(67, 202, 184, 0.3);
+
+    --radius-sm: 8px;
+    --radius-md: 16px;
+    --radius-pill: 100px;
+
+    --font-mono: 'IBM Plex Mono', monospace;
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+
+    --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-black);
+    color: var(--text-white);
+    font-family: var(--font-mono);
+    line-height: 1.6;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-track {
+    background: var(--bg-black);
+}
+::-webkit-scrollbar-thumb {
+    background: #1e293b;
+    border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-teal);
+}
+
+/* Preloader Component */
+.loader_component {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000000;
+    z-index: 99999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+.loader_waves {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    line-height: 1.15;
+    white-space: pre;
+    color: var(--accent-teal);
+    user-select: none;
+    opacity: 0.85;
+}
+
+.loader_text {
+    position: absolute;
+    bottom: 12%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: var(--font-mono);
+    font-size: 1rem;
+    color: var(--accent-teal);
+    background: rgba(0, 0, 0, 0.8);
+    padding: 0.8rem 1.5rem;
+    border: 1px solid var(--border-glow);
+    border-radius: 8px;
+    box-shadow: 0 0 30px var(--accent-teal-glow);
+}
+
+/* Navbar */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border-bottom: 1px solid var(--border-color);
+    padding: 1.25rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-brand {
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #ffffff !important;
+    letter-spacing: -0.02em;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    text-decoration: none;
+}
+
+.navbar-brand .logo-symbol {
+    width: 32px;
+    height: 32px;
+    background: linear-gradient(135deg, var(--accent-teal) 0%, #2dd4bf 100%);
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #000000;
+    font-weight: 900;
+    font-size: 1.2rem;
+}
+
+.nav-link {
+    font-family: var(--font-mono);
+    font-size: 0.95rem;
+    color: var(--text-muted) !important;
+    padding: 0.5rem 1.2rem !important;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.nav-link:hover {
+    color: #ffffff !important;
+}
+
+.btn-hyde {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    color: #ffffff !important;
+    font-family: var(--font-mono);
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 0.65rem 1.5rem;
+    border-radius: var(--radius-sm);
+    transition: var(--transition);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    cursor: pointer;
+}
+
+.btn-hyde:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: var(--accent-teal);
+    color: #ffffff !important;
+    box-shadow: 0 0 25px var(--accent-teal-glow);
+}
+
+.btn-hyde-primary {
+    background: linear-gradient(135deg, var(--accent-teal) 0%, #14b8a6 100%);
+    color: #000000 !important;
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: 0.9rem;
+    padding: 0.75rem 1.8rem;
+    border-radius: var(--radius-sm);
+    border: none;
+    transition: var(--transition);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.btn-hyde-primary:hover {
+    background: linear-gradient(135deg, #2dd4bf 0%, #0d9488 100%);
+    box-shadow: 0 0 35px var(--accent-teal-glow);
+    transform: translateY(-2px);
+}
+
+/* Hero Section */
+.hero-section {
+    padding: 8rem 0 6rem;
+    position: relative;
+    background: radial-gradient(circle at 50% 20%, rgba(67, 202, 184, 0.15) 0%, transparent 65%);
+}
+
+.hero-title {
+    font-family: var(--font-mono);
+    font-size: clamp(3rem, 6.5vw, 5.5rem);
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    line-height: 1.05;
+    color: #ffffff;
+}
+
+.hero-lead {
+    font-family: var(--font-mono);
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+/* Partners / Investor Logos */
+.partner-logo {
+    height: 32px;
+    opacity: 0.6;
+    filter: brightness(0) invert(1);
+    transition: var(--transition);
+}
+
+.partner-logo:hover {
+    opacity: 1;
+}
+
+/* Cards & Grid Containers */
+.section-padding {
+    padding: 7rem 0;
+}
+
+.hyde-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 2.5rem;
+    height: 100%;
+    transition: var(--transition);
+}
+
+.hyde-card:hover {
+    border-color: var(--border-glow);
+    box-shadow: 0 15px 40px rgba(67, 202, 184, 0.12);
+    transform: translateY(-4px);
+}
+
+.hyde-card h3 {
+    font-family: var(--font-mono);
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 0.75rem;
+}
+
+.hyde-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+/* Modal Drawer */
+.modal-content {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    color: var(--text-white);
+    font-family: var(--font-mono);
+}
+
+.form-control, .form-select {
+    background-color: #000000 !important;
+    border: 1px solid var(--border-color) !important;
+    color: #ffffff !important;
+    font-family: var(--font-mono);
+    padding: 0.75rem 1rem;
+    border-radius: var(--radius-sm);
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--accent-teal) !important;
+    box-shadow: 0 0 15px var(--accent-teal-glow) !important;
+}
+
+/* Footer */
+footer {
+    background-color: #000000;
+    border-top: 1px solid var(--border-color);
+    padding: 4.5rem 0 2.5rem;
+    color: var(--text-sub);
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+}
+
+footer h5 {
+    color: #ffffff;
+    font-size: 0.95rem;
+    margin-bottom: 1.25rem;
+}
+
+footer a {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+footer a:hover {
+    color: var(--accent-teal);
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer ul li {
+    margin-bottom: 0.75rem;
+}
